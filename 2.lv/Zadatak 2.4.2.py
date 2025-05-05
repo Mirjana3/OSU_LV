@@ -24,7 +24,7 @@ print(f'Srednja visina žena: {np.mean(zene[:, 1]):.2f} cm')
 fig, axs = plt.subplots(1, 2, figsize=(12, 6)) 
 
 # odnos visine i mase
-axs[0].scatter(data[:, 1], data[:, 2], alpha=0.5, label='Svi podaci')
+axs[0].scatter(data[:, 1], data[:, 2], alpha=0.5, label='Svi podaci') # raspršenog (scatter), [:, n] - svi podaci u redu u n redu od 0 do n
 axs[0].set_xlabel('Visina (cm)')
 axs[0].set_ylabel('Masa (kg)')
 axs[0].set_title('Odnos visine i mase')
@@ -32,7 +32,7 @@ axs[0].grid(True)
 axs[0].legend()
 
 # odnos visine i mase za svaku 50. osoba
-axs[1].scatter(data[::50, 1], data[::50, 2], color='red', alpha=0.7, label='Svaka 50. osoba')
+axs[1].scatter(data[::50, 1], data[::50, 2], color='red', alpha=0.7, label='Svaka 50. osoba') # slicing - odabir svakog 50. reda podataka u drugoj koloni
 axs[1].set_xlabel('Visina (cm)')
 axs[1].set_ylabel('Masa (kg)')
 axs[1].set_title('Odnos visine i mase za svaku 50. osobu')
